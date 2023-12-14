@@ -1,32 +1,73 @@
-
+body{
+    background-color: aqua;
+    font-family: 'Noto Sans', sans-serif;
+}
+h1, h2, h3, h4 {
+    font-family: 'Roboto', monospace;
+}
 .container{
     max-width: 840px;
     margin: 0 auto;
+}
+.container > div {
+    margin: 20px auto;
 }
 .intro {
     text-align: center;
     
 }
+
 .sectionTitle{
     color: blue;
     font-size: 16px;
 }
 .about-grid{
-    grid-template-columns: 100px;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: auto;
 
+}
+ul {
+    list-style-type: none;
+  }
+.i-am{
+    list-style-type: none;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 400px;
+}
+.i-like{
+    list-style-type: none;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 200px;
+}
+
+@media (max-width: 480px) {
+    .about-grid{
+        grid-template-columns: 100%
+    }
+    
 }
 .project-heading{
     text-align: center;
+    margin-left: center;
 
 }
 .project-grid{
     display: grid;
-    grid-template-columns: 50% 50%;
+    margin-left: 100px;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
 }
-.project-image{
+.project-image-wrapper{
     justify-self: center;
     padding: 4%;
+    position: relative;
+}
+.project-image{
+    border-radius: 5%;
+    box-shadow: 0 4px 6px 0 rgba(34, 60, 80,16) ;
 }
 .links-and-contact{
     display: grid;
@@ -40,6 +81,45 @@
     padding: 0;
 }
 
+a:hover{
+    background-color: blueviolet;
+    font-size: medium;
+}
+.profile-picture{
+    border-radius: 50%;
+    width: 150px;
+    height: 150;
+    box-shadow: 0 4px 6px 0 rgba(34, 70, 80, 1);
+    transition: all ease-in-out .2s;
+}
 
+.profile-picture:hover{
+    box-shadow: 0 8px 12px 0 rgba(34, 80, 60 );
+}
 
+@media (max-width: 650px) {
+    .links-and-contact{
+        grid-template-columns: 100%;
+    }
+}
 
+from input, textarea {
+    padding: 5px;
+    border-radius: 5px;
+    width: 240px;
+}
+ form {
+    width: 250px;
+    margin: 0 auto;
+
+ }
+ form input[type="submit"] {
+    width: 250px;
+ }
+ .submit-button-wrapper {
+    margin: 20px 0;
+ }
+ hr {
+    border: 0;
+    height: 1px;
+ }
