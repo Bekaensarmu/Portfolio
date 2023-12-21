@@ -24,11 +24,17 @@ let submitButton = document.querySelector('#submit-button');
    console.log(submitButton);
 
    function clickListener(event){
-    event.preventDefault();
-    console.log('Button clicked')
+   console.log('Button clicked');
 }
 
-submitButton.addEventListener('click', clickListener);
+
+  
+function clickListener(event){
+    event.preventDefault();
+    console.log('Button clicked');
+}
+
+
 
 
    
